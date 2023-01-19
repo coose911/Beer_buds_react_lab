@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import BeerList from '../Component/BeerList'
 import MoreBeerDetail from '../Component/MoreBeerDetail'
+import FavouriteBeer from '../Component/FaveBeer'
 
 
 
@@ -25,17 +26,22 @@ const BeerBox = () => {
         setBeerDetail(beerObject)
     }
 
-
-
+    const addFaveBeerToList = (faveBeerObject) => {
+        const newFaveBeerList = [...faveBeer, faveBeerObject]
+        setFaveBeer(newFaveBeerList)
+    }
 
 
     return (
         <>
-            {!beerDetail && <BeerList beers={beers} getmoreBeerDetail={getmoreBeerDetail}/>}
+            {!beerDetail && <BeerList beers={beers} getmoreBeerDetail={getmoreBeerDetail} addFaveBeerToList ={addFaveBeerToList} />}
             {beerDetail && <MoreBeerDetail beer={beerDetail} />}
+            {!beerDetail && <FavouriteBeer favbeer={faveBeer}/>}
         </>
+
+
     );
-}
+} 
 
 
 

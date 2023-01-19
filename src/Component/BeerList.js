@@ -3,15 +3,17 @@ import Beer from './Beer';
 import FaveBeer from './FaveBeer';
 import MoreBeerDetail from './MoreBeerDetail';
 
-const BeerList = ({beers, getmoreBeerDetail}) => {
+const BeerList = ({beers, getmoreBeerDetail, addFaveBeerToList}) => {
+
+
+
 
     const listOfBeers = beers.map((beer) => {
         return (
-            <Beer beer={beer} key={beer.id} getmoreBeerDetail={getmoreBeerDetail}/>
-            
-
+            <Beer beer={beer} key={beer.id} getmoreBeerDetail={getmoreBeerDetail} addFaveBeerToList ={addFaveBeerToList}/>
         )
     })
+
 
 
 
