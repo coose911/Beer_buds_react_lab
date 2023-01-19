@@ -1,18 +1,21 @@
 import React from 'react'
 
 
-const MoreBeerDetail = () => {
+const MoreBeerDetail = (beer) => {
+
+
+    let beerName = beer.name
+    console.log(beerName)
 
 
 
 
 
-
-
-
-
-
-    return ( null );
+    return (
+        <>
+            <h1>{beerName}</h1>
+        </>
+    );
 }
 
 export default MoreBeerDetail;
