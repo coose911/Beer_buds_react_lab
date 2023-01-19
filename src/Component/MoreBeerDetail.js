@@ -1,11 +1,10 @@
 import React from 'react'
 
 
-const MoreBeerDetail = (beer) => {
+const MoreBeerDetail = ({beer}) => {
 
 
-    let beerName = beer.name
-    console.log(beerName)
+    
 
 
 
@@ -13,7 +12,7 @@ const MoreBeerDetail = (beer) => {
 
     return (
         <>
-            <h1>{beerName}</h1>
+            <h1>{beer.description}</h1>
         </>
     );
 }
